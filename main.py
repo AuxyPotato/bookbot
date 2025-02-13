@@ -1,4 +1,5 @@
 # bookbot 
+# boot.dev guided project
 # author: lucy
 
 from collections import Counter
@@ -18,9 +19,7 @@ def wordcount():
 def charcount():
     with open(path_to_file) as f:
         file_contents = f.read()
-        contents_lowercase = file_contents.lower()
-        charcount = Counter(contents_lowercase)
-        return(charcount)
+        return(Counter(file_contents.lower()))
 
 
 charcount()
