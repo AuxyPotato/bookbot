@@ -4,39 +4,28 @@
 
 from collections import Counter
 
-path_to_file = "books/frankenstein.txt"
-
 def main():
-    with open(path_to_file) as f:
-        file_contents = f.read()
-        print(file_contents)
-
-def wordcount():
-    with open(path_to_file) as f:
-        file_contents = f.read()
-        return(len(file_contents.split()))
-
-def charcount():
-    with open(path_to_file) as f:
-        file_contents = f.read()
-        return(Counter(file_contents.lower()))
-
-
-charcount()
-
-
-def report():
+    path_to_file = "books/frankenstein.txt"
+    file_contents = get_text(path_to_file)
+    num_words = wordcount(file_contents)
+    num_chars = charcount(file_contents)
     print(f"--- Begin report of {path_to_file} ---")
-    print(f"{wordcount()} words found in the document")
-    print("")
-    
+    print(f"{num_words} words found in the document")
+    print(num_chars)
 
 
+def wordcount(file_contents):
+    return(len(file_contents.split()))
+
+def charcount(file_contents):
+    return(Counter(file_contents.lower()))
+
+def get_text(path):
+    with open(path) as f:
+        return f.read()
 
 
 
 
 if __name__ == "__main__":
     main()
-
-report()
