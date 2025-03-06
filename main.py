@@ -2,7 +2,7 @@
 # boot.dev guided project
 # author: lucy
 
-from collections import Counter
+from stats import wordcount, charcount
 
 def main():
     path_to_file = "books/frankenstein.txt"
@@ -19,15 +19,8 @@ def main():
     for char, count in sorted_chars:
         print(f"The '{char}' character was found {count} times")
 
-
-def wordcount(file_contents):
-    return(len(file_contents.split()))
-
-def charcount(file_contents):
-    return(list(Counter(file_contents.lower()).items()))
-
-def get_text(path):
-    with open(path) as f:
+def get_text(filepath):
+    with open(filepath) as f:
         return f.read()
 
 
