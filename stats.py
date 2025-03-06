@@ -10,3 +10,4 @@ def wordcount(file_contents):
 
 def charcount(file_contents):
     return(list(Counter(file_contents.lower()).items()))
+    
