@@ -1,7 +1,8 @@
-# bookbot
-# boot.dev guided project
-# statistics calculation
-# author: lucy
+# BookBot is a Boot.dev guided project.
+#
+# This stats file takes the file contents retrieved in main.py and
+# runs the calculations on them. These functions are imported in main.py
+# and called there to practice inter-file operations.
 
 from collections import Counter
 
