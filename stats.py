@@ -7,12 +7,15 @@
 from collections import Counter
 
 def wordcount(file_contents):
+    """This returns the amount of words in the file."""
     return len(file_contents.split())
 
 def charcount(file_contents):
+    """This returns the amount of characters, converted to lowercase."""
     return list(Counter(file_contents.lower()).items())
 
 def sort_characters(char_list):
+    """This sorts all alpha characters into a list with counts."""
     return sorted(
         [(char, count) for char, count in char_list if char.isalpha()], 
         key=lambda pair: pair[1],
