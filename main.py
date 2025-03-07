@@ -2,7 +2,7 @@
 #
 # It takes a text file as input by running the program as 'python 3 main.py /path/to/file'.
 # The program will calculate the amount of words and characters in the file. It will also
-# generate a list of of each character in order of occurrence, listing the amounts of each.
+# generate a list of each character in order of occurrence, listing the amounts of each.
 
 import sys
 
