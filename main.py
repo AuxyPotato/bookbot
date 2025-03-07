@@ -10,6 +10,7 @@ import sys
 from stats import wordcount, charcount, sort_characters
 
 def main():
+    """This is the entry point of the program."""
     path_to_file = filepath()
     file_contents = get_text(path_to_file)
     num_words = wordcount(file_contents)
@@ -18,10 +19,12 @@ def main():
     generate_report(path_to_file, num_words, sorted_chars)
 
 def get_text(filepath):
+    """This retrieves the contents of the file as text."""
     with open(filepath) as f:
         return f.read()
 
 def generate_report(path_to_file, num_words, sorted_chars):
+    """This generates the report in a nice format."""
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {path_to_file}...")
     print("----------- Word Count ----------")
@@ -33,6 +36,7 @@ def generate_report(path_to_file, num_words, sorted_chars):
     print("============= END ===============")
 
 def filepath():
+    """This ensures a filepath can be set when running the file."""
     if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
