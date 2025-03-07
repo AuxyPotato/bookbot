@@ -1,7 +1,8 @@
-# bookbot 
-# boot.dev guided project
-# a small program that calculates the amount of characters and words in a book
-# author: lucy
+# BookBot is a Boot.dev guided project.
+#
+# It takes a text file as input by running the program as 'python 3 main.py /path/to/file'.
+# The program will calculate the amount of words and characters in the file. It will also
+# generate a list of of each character in order of occurrence, listing the amounts of each.
 
 import sys
 
